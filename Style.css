@@ -1,0 +1,125 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('fundoaposta.png');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  backdrop-filter: blur(4px);
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+label {
+  font-weight: 500;
+  color: #444;
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 4px #4CAF50;
+}
+
+.sexo-opcoes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0 20px;
+}
+
+.sexo-opcoes label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+input[type="radio"] {
+  transform: scale(1.4);
+  accent-color: #4CAF50;
+}
+
+.botao-apostar {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.botao-apostar:hover {
+  background-color: #388E3C;
+  transform: scale(1.02);
+}
+
+.pix-info {
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-left: 6px solid #4CAF50;
+  border-radius: 8px;
+  color: #2e7d32;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .pix-info {
+    font-size: 14px;
+  }
+
+  .sexo-opcoes {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

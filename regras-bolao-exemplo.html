@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Regras do Bolão</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-image: url('fundo.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .titulo-imagem {
+      display: block;
+      margin: 30px auto 10px auto;
+      max-width: 460px;
+      height: auto;
+    }
+    .regras-container {
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .regras-titulo {
+      text-align: center;
+      color: #444;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .regras-texto {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .regras-texto ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+    .botao-voltar {
+      display: block;
+      background-color: #6f4e37;
+      color: white;
+      font-weight: bold;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      margin: 30px auto 0 auto;
+      cursor: pointer;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <img src="titulo.png" alt="Título do Bolão" class="titulo-imagem"/>
+  <div class="regras-container">
+    <div class="regras-titulo">REGRAS DO BOLÃO</div>
+    <div class="regras-texto">
+      <p>O resultado do bolão será divulgado após a explosão, durante o Chá Revelação, às 16h30 do dia 7 de junho de 2025.</p>
+      <ul>
+        <li>30% do valor apostado no sexo <strong>perdedor</strong> será destinado como presente para o casal Léo e Nicole.</li>
+        <li>Os 70% restantes serão distribuídos proporcionalmente entre os apostadores que acertarem o sexo revelado.</li>
+        <li>O valor ganho será proporcional à quantia apostada, promovendo justiça no retorno.</li>
+      </ul>
+      <p><strong>Exemplo prático:</strong></p>
+      <ul>
+        <li>Alberto apostou R$ 1.000 em <strong>menina</strong></li>
+        <li>Daniela apostou R$ 500 em <strong>menina</strong></li>
+        <li>Eduardo apostou R$ 200 em <strong>menina</strong></li>
+        <li>Bruno apostou R$ 500 em <strong>menino</strong></li>
+        <li>Cláudio apostou R$ 2.000 em <strong>menino</strong></li>
+      </ul>
+      <p><strong>Sexo revelado: menina</strong></p>
+      <ul>
+        <li>Total apostado no sexo perdedor (menino): R$ 2.500</li>
+        <li>30% vai como presente ao casal: R$ 750</li>
+        <li>70% (R$ 1.750) será distribuído entre os que acertaram:</li>
+        <ul>
+          <li>Alberto (1000 / 1700) × 1750 = R$ 1.029,41</li>
+          <li>Daniela (500 / 1700) × 1750 = R$ 514,71</li>
+          <li>Eduardo (200 / 1700) × 1750 = R$ 205,88</li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+  <button class="botao-voltar" onclick="window.location.href='index.html'">Voltar</button>
+</body>
+</html>

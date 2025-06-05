@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolão do Chá Revelação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="fundo">
+  <img src="titulo.png" alt="Título do Bolão" style="display: block; margin: 40px auto 40px auto; max-width: 460px; height: auto;">
+  <main class="form-container" style="background-color: rgba(255, 255, 255, 0.5); margin-top: 0; padding: 30px; box-sizing: border-box;">
+
+    <table id="tabela-apostas" style="width: 100%; margin: 0 auto 20px auto; background: rgba(255, 255, 255, 0.5); border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); border-collapse: collapse; border: 1px solid #d8cfc4;">
+      <thead style="background-color: rgba(241, 241, 241, 0.7); font-size: 16px;">
+        <tr>
+          <th style="padding: 16px 20px; text-align: left; width: 40%; border-right: 1px solid #d8cfc4; background-color: rgba(216, 207, 196, 0.2);">Nome</th>
+          <th style="padding: 16px 12px; text-align: center; width: 15%; border-right: 1px solid #d8cfc4; background-color: rgba(216, 207, 196, 0.2);">Sexo</th>
+          <th style="padding: 16px 12px; text-align: center; width: 20%; border-right: 1px solid #d8cfc4; background-color: rgba(216, 207, 196, 0.2);">Valor</th>
+          <th style="padding: 16px 12px; text-align: center; width: 25%; background-color: rgba(216, 207, 196, 0.2);">Status</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-body" style="font-size: 15px; line-height: 2.4; text-align: center;">
+        <!-- Linhas inseridas via JS -->
+      </tbody>
+    </table>
+
+    <div class="totais" style="margin-top: 24px; display: flex; justify-content: center; gap: 16px; flex-wrap: nowrap; flex-direction: row;">
+  <div style="background-color: #e0f3ff; padding: 12px 20px; border-radius: 10px; font-weight: bold; min-width: 160px; text-align: center; color: #0077b6; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);">
+    Total Menino:<br><span id="total-menino">R$ 0,00</span>
+  </div>
+  <div style="background-color: #ffe9f0; padding: 12px 20px; border-radius: 10px; font-weight: bold; min-width: 160px; text-align: center; color: #c9184a; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);">
+    Total Menina:<br><span id="total-menina">R$ 0,00</span>
+  </div>
+</div>
+    </div>
+
+    <button onclick="window.location.href='apostar.html'" class="botao-apostar" style="background-color: #b89f7a; color: white; font-weight: bold; margin-top: 30px; padding: 12px 24px; border-radius: 8px; font-size: 16px;">
+      Apostar!
+    </button>
+  </main>
+
+  <script>
+    // Aplicar borda superior às linhas inseridas dinamicamente
+    function adicionarLinha(nome, sexo, valor, status) {
+      const tabela = document.getElementById("tabela-body");
+      const linha = document.createElement("tr");
+      linha.style.borderTop = "1px solid #e6ded6";
+
+      linha.innerHTML = `
+        <td style="text-align: left; padding: 12px 16px;">${nome}</td>
+        <td>${sexo}</td>
+        <td>${valor}</td>
+        <td>${status}</td>
+      `;
+
+      tabela.appendChild(linha);
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
